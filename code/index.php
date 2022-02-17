@@ -24,12 +24,12 @@ echo $my_beloved_exp . "<br>";
 echo (1+2)*(1*2)*(1**2-(1-2)) . "<br>";
 $last_month = 1187.23;
 $this_month = 1089.98;
-echo $last_month - $this_month;
+echo $last_month - $this_month . "<br>";
 
 
 // ——————————————————————————————————————————————————
 // TASK 11
-echo "<br><br>TASK 11<br>";
+echo "<br>TASK 11<br>";
 
 $num_languages = 4;
 $months = 11;
@@ -40,4 +40,6 @@ echo $days_per_language . "<br>";
 
 // ——————————————————————————————————————————————————
 // TASK 12
-echo "<br><br>TASK 12<br>";
+echo "<br>TASK 12<br>";
+
+echo 8**2 . "<br>";
