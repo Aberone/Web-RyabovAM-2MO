@@ -56,7 +56,7 @@ $answer *= 2;
 $answer -= 2;
 $answer /= 2;
 $answer -= $my_num;
-echo $answer;
+echo $answer . "<br>";
 
 
 // ——————————————————————————————————————————————————
@@ -88,3 +88,50 @@ foreach ($ar as $elem) {
 	$sar += $elem;
 }
 echo $sar . "<br>";	
+
+$sq = sqrt(379);
+echo round($sq) . " " . round($sq, 1) . " " . round($sq, 2) . "<br>";
+$sq = sqrt(587);
+$sq_floor_and_ceil = ["floor" => floor($sq), "ceil" => ceil($sq)];
+
+$ar = [4, -2, 5, 19, -130, 0, 10];
+echo min($ar) . " " . max($ar) . "<br>";
+echo rand(1, 100) . "<br>";
+$ar = [];
+for ($i = 0; $i < 10; $i++) {
+	$ar[] = rand();
+	echo $ar[$i] . ", ";
+}
+echo "<br>";
+
+$a = 13;
+$b = 17;
+echo abs($a - $b) . "<br>";
+$ar = [1, 2, -1, -2, 3, -3];
+$br = [];
+foreach ($ar as $elem) {
+	$br[] = abs($elem);
+}
+foreach ($br as $elem) {
+	echo $elem . ", ";
+}
+echo "<br>";
+
+$example_number = 30;
+$en_divisors = [];
+for ($i = 1; $i <= $example_number; $i++) {
+	if ($example_number % $i === 0) {
+		$en_divisors[] = $i;
+		echo $i . " ";
+	}
+}
+echo "<br>";
+
+$ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$elem_account = 0;
+$ar_sum = 0;
+while ($ar_sum <= 10) {
+	$ar_sum += $ar[$elem_account];
+	$elem_account++;
+}
+echo $elem_account . "<br>";
