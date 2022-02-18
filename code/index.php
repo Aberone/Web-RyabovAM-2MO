@@ -324,3 +324,31 @@ for ($i = 0; $i < 20; $i++) {
 	}
 	echo "<br>";
 }
+
+
+// ——————————————————————————————————————————————————
+// TASK 20
+echo "<br>TASK 20<br>";
+
+$ar = [12, -32, 0, 2, 11, 109, -17];
+
+$mean = array_sum($ar) / (float)count($ar);
+echo $mean . "<br>";
+
+$n = array_sum(range(1, 100, 1));
+echo $n . "<br>";
+
+function sqrtify(&$a, $key)
+{
+    $a = sqrt($a);
+}
+
+$sqrtified_ar = $ar;
+array_walk($sqrtified_ar, 'sqrtify');
+echo_array($sqrtified_ar);
+
+$letters = range('a', 'z');
+$numbers = range(1, 26);
+$dictionary = array_combine($letters, $numbers);
+
+echo array_sum(array_map('intval', str_split('1234567890', 2))) . "<br>";
