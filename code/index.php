@@ -57,3 +57,34 @@ $answer -= 2;
 $answer /= 2;
 $answer -= $my_num;
 echo $answer;
+
+
+// ——————————————————————————————————————————————————
+// TASK 14
+echo "<br>TASK 14<br>";
+
+$a = 10;
+$b = 3;
+$c = $a % $b;
+echo "{$a} % {$b} = {$c}<br>";
+
+$a = 25;
+$b = 5;
+if ($a % $b === 0) {
+	$c = $a / $b;
+	echo "Делится {$c}<br>";
+}
+else {
+	$c = $a % $b;
+	echo "Делится с остатком {$c}<br>";
+}
+
+$st = pow(2, 10);
+echo $st . "<br>";
+echo sqrt(245) . "<br>";
+$ar = [4, 2, 5, 19, 13, 0, 10];
+$sar = 0;
+foreach ($ar as $elem) {
+	$sar += $elem;
+}
+echo $sar . "<br>";	
