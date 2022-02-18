@@ -135,3 +135,16 @@ while ($ar_sum <= 10) {
 	$elem_account++;
 }
 echo $elem_account . "<br>";
+
+
+// ——————————————————————————————————————————————————
+// TASK 15
+echo "<br>TASK 15<br>";
+
+function printStringReturnNumber()
+{
+	echo "Please help me I am dying of boredom... 505 is my SOS...<br>";
+	return 505;
+}
+$my_num = printStringReturnNumber();
+echo $my_num . "<br>";
