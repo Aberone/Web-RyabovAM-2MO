@@ -43,3 +43,17 @@ echo $days_per_language . "<br>";
 echo "<br>TASK 12<br>";
 
 echo 8**2 . "<br>";
+
+
+// ——————————————————————————————————————————————————
+// TASK 13
+echo "<br>TASK 13<br>";
+
+$my_num = 505;
+$answer = $my_num;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num;
+echo $answer;
