@@ -215,7 +215,6 @@ echo reduce_number($test_number) . "<br>";
 // TASK 17
 echo "<br>TASK 17<br>";
 
-
 /*
     Формулировка «Заполните массив следующим образом: в первый элемент запишите 'x',
 во второй 'xx', в третий 'xxx' и так далее» волшебна, так что я решил просто писать
@@ -276,3 +275,40 @@ foreach ($arr as $elem) {
 echo $elem_account . "<br>";
 echo $arr[$elem_account - 1] . "<br>";
 echo $arr[$elem_account - 2] . "<br>";
+
+
+// ——————————————————————————————————————————————————
+// TASK 18
+echo "<br>TASK 18<br>";
+
+function sum_is_greater_than_ten(int $a, int $b): bool
+{
+	return $a + $b > 10;
+}
+
+function are_equal(int $a, int $b): bool
+{
+	return $a === $b;
+}
+
+$test = 0;
+echo $test == 0 ? 'верно<br>' : '';
+
+$age = 59;
+if ($age < 10 or $age > 99) {
+	echo "Число меньше 10 или больше 99<br>";
+}
+else {
+	$age_digit_sum = $age / 10 + $age % 10;
+	if ($age_digit_sum <= 9) {
+		echo "Сумма цифр числа однозначна<br>";
+	}
+	else {
+		echo "Сумма цифр числа двузначна<br>";
+	}
+}
+
+$ar = [1, 2, 3];
+if (count($ar) == 3) {
+	echo $ar[0] + $ar[1] + $ar[2] . "<br>";
+}
