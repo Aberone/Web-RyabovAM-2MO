@@ -148,3 +148,64 @@ function printStringReturnNumber()
 }
 $my_num = printStringReturnNumber();
 echo $my_num . "<br>";
+
+
+// ——————————————————————————————————————————————————
+// TASK 16
+echo "<br>TASK 16<br>";
+
+function increaseEnthusiasm(string $s): string
+{
+	return $s . "!";
+}
+echo increaseEnthusiasm("msaisuhtnEesaercni") . "<br>";
+
+function repeatThreeTimes(string $s): string
+{
+	return $s . $s . $s;
+}
+echo repeatThreeTimes(increaseEnthusiasm("BORING")) . "<br>";
+
+function cut(string $s, int $length=10): string
+{
+	$res = "";
+	for ($i = 0; $i < $length; $i++) {
+		$res .= $s[$i];
+	}
+	return $res;
+}
+
+function echo_array(array $arr, $first_idx=0)
+{
+	if ($first_idx > count($arr)) {
+		return null;
+	}
+	else if ($first_idx === count($arr) - 1) {
+		echo $arr[$first_idx] . "<br>";
+		return null;
+	}
+	else {
+		echo $arr[$first_idx] . ", ";
+		echo_array($arr, $first_idx + 1);
+	}
+}
+$ar = [4, -2, 5, 19, -130, 0, 10];
+echo_array($ar);
+
+function reduce_number(int $num): int
+{
+	$digit_sum = 0;
+	$num_copy = abs($num);
+	while ($num_copy > 0) {
+		$digit_sum += $num_copy % 10;
+		$num_copy /= 10;
+	}
+	if ($digit_sum < 10) {
+		return $digit_sum;
+	}
+	else {
+		return reduce_number($digit_sum);
+	}
+}
+$test_number = 13189532;
+echo reduce_number($test_number) . "<br>";
