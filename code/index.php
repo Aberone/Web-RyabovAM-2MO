@@ -209,3 +209,70 @@ function reduce_number(int $num): int
 }
 $test_number = 13189532;
 echo reduce_number($test_number) . "<br>";
+
+
+// ——————————————————————————————————————————————————
+// TASK 17
+echo "<br>TASK 17<br>";
+
+
+/*
+    Формулировка «Заполните массив следующим образом: в первый элемент запишите 'x',
+во второй 'xx', в третий 'xxx' и так далее» волшебна, так что я решил просто писать
+'xxxxxxxxxxxxxxxxxx', пока не надоест....
+*/
+$ar = ['x', 'xx', 'xxx', 'xxxx', 'xxxxx', 'xxxxxx', 'xxxxxxx', 'xxxxxxxx', 'xxxxxxxxx', 'xxxxxxxxxx'];
+// Всё, надоело
+
+function arrayFill($elem, int $times)
+{
+	$res = [];
+	for ($i = 0; $i < $times; $i++) {
+		$res[] = $elem;
+	}
+	return $res;
+}
+echo_array(arrayFill('x', 5));
+
+$ar = [[1, 2, 3], [4, 5], [6]];
+$ar_sum = 0;
+for ($i = 0; $i < count($ar); $i++) {
+	for ($j = 0; $j < count($ar[$i]); $j++) {
+		$ar_sum += $ar[$i][$j];
+	}
+}
+echo $ar_sum . "<br>";
+
+$ar = [];
+for ($i = 0; $i < 3; $i++) {
+	$ar[] = [];
+	for ($j = 0; $j < 3; $j++) {
+		$ar[$i][] = 1 + $j + 3*$i;
+	}
+}
+function echo_2d_array(array $arr)
+{
+	for ($i = 0; $i < count($arr); ++$i) {
+		echo_array($arr[$i]);
+	}
+}
+echo_2d_array($ar);
+
+$ar = [2, 5, 3, 9];
+$result = $ar[0] * $ar[1] + $ar[2] * $ar[3];
+echo $result . "<br>";
+
+$user = ['name' => 'Ахалай', 'surname' => 'Махан', 'patronymic' => 'Махалаевич'];
+echo $user['name'] . " " . $user['surname'] . " " . $user['patronymic'] . "<br>";
+
+$date = ['year' => 2022, 'month' => 02, 'day' => 18];
+echo $date['year'] . "-" . $date['month'] . "-" . $date['day'] . "<br>";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$elem_account = 0;
+foreach ($arr as $elem) {
+	$elem_account++;
+}
+echo $elem_account . "<br>";
+echo $arr[$elem_account - 1] . "<br>";
+echo $arr[$elem_account - 2] . "<br>";
