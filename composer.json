@@ -1,0 +1,14 @@
+{
+    "name": "aberone/web-ryabov-am-2mo",
+    "description": "yay",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Aberone",
+            "email": "aberone2029@mail.ru"
+        }
+    ],
+    "require": {
+        "google/apiclient": "2.0"
+    }
+}
